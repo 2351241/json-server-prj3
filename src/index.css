@@ -130,3 +130,14 @@ button {
   height: 40px;
   font-size: 20px;
 }
+
+/* 새로 추가 for CreateDay.js */
+.create_day_container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.create_day_box{
+  position: absolute;
+  top:50%;
+}

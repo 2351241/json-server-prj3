@@ -4,6 +4,7 @@
 import { Link } from "react-router-dom";
 // import { useEffect, useState } from "react";
 import useFetch from "../hooks/useFetch";
+import Spinner from "../assets/spinner.gif"
 
 
 export default function DayList(){
@@ -21,6 +22,11 @@ export default function DayList(){
 
   // 함수호출
   const days = useFetch("http://localhost:4000/days")
+  if (days.length===0){
+    return <span> Loading... 
+      <img src={Spinner} alt={"로딩중"}/>
+    </span>
+  }
   
   return(
     <ul className="list_day">

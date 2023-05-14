@@ -5,6 +5,7 @@ import Day from './component/Day';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import NotFound from './component/NotFound';
 import CreateWord from './component/CreateWord';
+import CreateDay from './component/CreateDay';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<DayList/>}/>
           <Route path="/day/:inputDay" element={<Day/>}/>
-          {/* <Route path="/create_day" element={<CreateDay/>} /> */}
+          <Route path="/create_day" element={<CreateDay/>} />
           <Route path="/create_word" element={<CreateWord/>} />
           <Route path="*" element={<NotFound/>} />
       </Routes>
